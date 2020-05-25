@@ -1,0 +1,34 @@
+.firstContainerPosts{
+    display: flex;
+    justify-content: center;
+}
+
+.containerPosts{
+    
+    background-color: white;
+    
+    width: 900px;
+    height: 500px;
+    box-shadow: 0 0 2px rgba(0,0,0,0.5);
+    padding: 105px;
+    border-radius: 5px;
+}
+
+.containerTitle{
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    
+}
+
+.svgList{
+    height: 20px;
+    color: green;
+    
+}
+.containerPosts h4{
+    justify-content: center;
+    align-items: center;
+    color: green;
+    margin-right: 10px;
+}

@@ -1,0 +1,42 @@
+.search{
+    align-items: center;
+    background-color: #EFF5FF;
+    justify-content: center;
+    display: flex;
+    padding-top: 15px;
+    border-style: hidden;
+}
+.welcome {
+  display: block;
+  position: relative;
+}
+.welcome h1{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 36px;
+  color: whitesmoke;
+  letter-spacing: 2px;
+  font-family: 'Baloo Thambi 2', cursive;
+  font-display: flex;
+  background-color: #252525 ;
+  opacity: 0.8;
+
+}
+.welcome img{
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 105px;
+  opacity: 0.8;
+}
+.searchPanel{
+  width: 500px;
+}
+.btnSearch img{
+  height: 25px;
+  width: 25px;
+}

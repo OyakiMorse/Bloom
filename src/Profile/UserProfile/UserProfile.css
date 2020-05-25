@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Oswald:wght@600&family=Ubuntu:wght@500&display=swap');
+.containerProfile{
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;  
+    color:#EFFEF7;
+    justify-content: center;
+    align-items: center;
+    
+    
+}
+  
+.userProfile{
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    width: 700px;
+    height: 300px;
+    box-shadow: 0 0 2px rgba(0,0,0,0.5); /* Параметры тени */
+    padding: 10px;
+    border-radius: 5px;
+    
+}
+
+.contentProfile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.iconUser {
+    height: 175px;
+    width: 175px;
+    border-radius: 50%;
+    align-items: flex-end;
+}
+.svg-inline--fa{
+    height: 20px;
+}
+.containerIconUser{
+    display: flex;
+    
+}
+
+.descriptionProfile{
+    justify-content: center;
+    flex-direction: column;
+    display: flex;
+    margin-left: 10px;
+    padding: 15px;
+    line-height: 2;
+    
+    
+}
+.nickname{
+    color: black;
+    justify-content: space-between;
+    display: flex;
+
+}
+.statistic{
+    display: flex;
+    justify-content: space-between;
+    letter-spacing: 1.55px;
+    font-weight: 500;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 14px;
+}
+.statistic p{
+
+    color: black;
+}
+
+.aboutUser{
+    color: black;
+    width: 400px;
+    font-size: 13px;
+}
+
+.buttonsProfile{
+    display: flex;
+}
+
+.messageBtn{
+    margin-right: 20px;
+}
+.postsUsers{
+    margin-top: 10px ;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    width: 700px;
+    height: 300px;
+    
+}
+
+
+
+
+  
+  

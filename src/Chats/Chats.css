@@ -1,0 +1,124 @@
+.chatContainer{
+    padding: 105px;
+    display: grid;
+    grid-template-columns: 3fr 10fr;
+    
+
+}
+.dialog{
+    margin: 10px;
+    width: 250px;
+    display: flex;
+    align-self: stretch;
+}
+.userItem{
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.dialog a{
+    text-decoration: none;
+    font-weight: 400;
+}
+.dialog img{
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-right: 10px;
+   
+}
+.dialogsItems{
+    padding: 10px;
+    background-color: white;
+    justify-content: space-between;
+
+    
+}
+.editUser{
+    font-size: 15px;
+    font-weight: bolder;
+}
+.userContent{
+    display: flex;
+    justify-content: space-between;
+  }
+
+.msgContent{
+    display: flex;
+    justify-content: space-between;
+    font-size: 10px;
+  }
+.timeMsg{
+    font-size: 11px;
+    font-weight: 400;
+}
+.shortMsg{
+    font-size: 13px;
+    
+}
+.dialogsItems .active{
+    color: white;
+}
+
+
+.messages-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+
+.messages{
+  max-width: 800px;
+  max-height: 450px;
+  flex-grow: 1;
+  overflow-y:scroll;
+  
+}
+ .messageSingle{
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    flex-grow: 1;
+    align-items: flex-end;
+    background-color: white;
+    margin-left: 2px;
+    flex-direction: column;
+    
+    
+   
+    
+ 
+  
+}
+.msgItem{
+    background-color: white;
+    border: 1px solid rgb(223, 223, 223);
+    padding: 10px;
+    border-radius: 15px 15px 0px 15px;
+    margin-right: 10px;
+}
+.oneMessage{
+    display: flex;
+}
+
+.inputMessage {
+    display: flex;
+    max-height: 30px;
+    min-height: 30px;
+}
+.inputMessage textarea {
+    max-width: 700px;
+    width: 100%;
+    max-height: 30px;
+    min-height: 30px;
+}
+
+  
+  
+  
+  
+  
