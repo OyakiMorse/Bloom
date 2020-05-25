@@ -8,7 +8,6 @@ let initialState = {
         {id: 3, name: 'Piter Boldyara', navlink: '/chats/', shortMsg: 'One  time...', timeMsg:'12:04', iconUser: 'https://i4.sndcdn.com/avatars-000277510549-36dbn1-t500x500.jpg'},
         {id: 4, name: 'Piter Boldyarach', navlink: '/chats/', shortMsg: 'One more ...', timeMsg:'6:04', iconUser: 'https://i4.sndcdn.com/avatars-000277510549-36dbn1-t500x500.jpg'},
         {id: 5, name: 'Piter Boldyarachka', navlink: '/chats/', shortMsg: ' more time...', timeMsg:'4:04', iconUser: 'https://i4.sndcdn.com/avatars-000277510549-36dbn1-t500x500.jpg'},
-      
     ],
 
     MessagesData:  [
@@ -18,15 +17,13 @@ let initialState = {
         { id: 4, message: "hello everyone" },
         { id: 5, message: "I am admin of Bloom" },
         { id: 6, message: "Please appriciate this network" },
-       
-        
     ],
-    
+
     newMsgText: '',
 };
 //state = initialState, action оці штуки треба
 const dialogsReducer = (state = initialState, action) => {
-    switch(action.type){ 
+    switch(action.type){
         case ADD_MSG:
             let newMessage = {
                 id: 8,
@@ -41,11 +38,11 @@ const dialogsReducer = (state = initialState, action) => {
         default:
             return state;
     }
-    
-    
-    
+
+
+
 }
-export const addMsgActionCreator = () => ( { type: ADD_MSG} ) 
+export const addMsgActionCreator = () => ( { type: ADD_MSG} )
 export const updateNewMsgActionCreator = (textMsg) => ( { type: UPDATE_NEW_MSG_TEXT, newMsg: textMsg } )
 
 export default dialogsReducer;

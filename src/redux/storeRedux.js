@@ -1,10 +1,10 @@
-import postReducer from './PostReducer';
+import postsReducer from './PostsReducer';
 import dialogsReducer from './DialogsReducer';
 import {createStore, combineReducers} from 'redux';
 
 //це функція від редакса яка зкріплює от ці редюсери і створюється сторе через createStore
 let reducersBatch = combineReducers({
-    mainPage: postReducer,
+    mainPage: postsReducer,
     chatsPage: dialogsReducer
 });
 let store = createStore(reducersBatch);

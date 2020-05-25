@@ -2,14 +2,13 @@
 .containerProfile{
     display: flex;
     flex-direction: column;
-    margin-top: 100px;  
     color:#EFFEF7;
     justify-content: center;
     align-items: center;
-    
-    
+
+
 }
-  
+
 .userProfile{
     display: flex;
     justify-content: center;
@@ -19,14 +18,14 @@
     box-shadow: 0 0 2px rgba(0,0,0,0.5); /* Параметры тени */
     padding: 10px;
     border-radius: 5px;
-    
+
 }
 
 .contentProfile{
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
 }
 
 .iconUser {
@@ -40,7 +39,7 @@
 }
 .containerIconUser{
     display: flex;
-    
+
 }
 
 .descriptionProfile{
@@ -50,8 +49,8 @@
     margin-left: 10px;
     padding: 15px;
     line-height: 2;
-    
-    
+
+
 }
 .nickname{
     color: black;
@@ -92,11 +91,10 @@
     background-color: white;
     width: 700px;
     height: 300px;
-    
+
 }
 
 
 
 
-  
-  
+

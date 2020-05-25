@@ -1,9 +1,7 @@
 .chatContainer{
-    padding: 105px;
+    padding: 50px 105px;
     display: grid;
     grid-template-columns: 3fr 10fr;
-    
-
 }
 .dialog{
     margin: 10px;
@@ -28,14 +26,14 @@
     justify-content: space-between;
     align-items: flex-end;
     margin-right: 10px;
-   
+
 }
 .dialogsItems{
     padding: 10px;
     background-color: white;
     justify-content: space-between;
 
-    
+
 }
 .editUser{
     font-size: 15px;
@@ -57,7 +55,7 @@
 }
 .shortMsg{
     font-size: 13px;
-    
+
 }
 .dialogsItems .active{
     color: white;
@@ -73,12 +71,12 @@
 
 .messages{
   max-width: 800px;
-  max-height: 450px;
   flex-grow: 1;
   overflow-y:scroll;
-  
+
 }
  .messageSingle{
+     max-height: 600px;
     height: 100%;
     display: flex;
     justify-content: flex-end;
@@ -87,18 +85,13 @@
     background-color: white;
     margin-left: 2px;
     flex-direction: column;
-    
-    
-   
-    
- 
-  
 }
+
 .msgItem{
     background-color: white;
     border: 1px solid rgb(223, 223, 223);
     padding: 10px;
-    border-radius: 15px 15px 0px 15px;
+    border-radius: 15px 15px 0 15px;
     margin-right: 10px;
 }
 .oneMessage{
@@ -115,10 +108,13 @@
     width: 100%;
     max-height: 30px;
     min-height: 30px;
+    resize: none;
 }
 
-  
-  
-  
-  
-  
+.inputMessage textarea:focus {
+    outline: none;
+}
+
+
+
+

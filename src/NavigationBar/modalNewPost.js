@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
 import { Button } from 'react-bootstrap';
 import Modal from 'react-modal';
-import './Modal.css'; 
-import { updatePosts } from '../redux/store';
-
+import './Modal.css';
+import { updatePosts } from '../redux/PostsReducer';
 
 
 function NewPostModal({ showModal, closeModal }) {
-  
+
   const [postState, updatePost] = useState({ text: '', photo: null, tags: [] });
+
+
+  // const {} = window.store.getState();
 
   const onUploadPhoto = ($event) => {
     const [uploadedFile] = $event.target.files;
@@ -39,29 +41,29 @@ function NewPostModal({ showModal, closeModal }) {
         text: $event.target.value,
       });
   }
-  // let postItems = 
+  // let postItems =
   const submitModalForm = () => {
     const { text, photo, tags } = postState;
     // validate your form
     if (!text && !photo) return;
-    // subtom your form
-    updatePosts({...postState});
+    // submit your form
+    window.store.dispatch(updatePosts(postState));
     // close modal
     closeModal();
   }
-  
+
     return (
 
       <div className="containerModalPost">
-        
+
         <div className="contentNewPost">
               <Modal
                 isOpen={showModal}
                 onRequestClose={closeModal}
                 className="modal-root"
-                ariaHideApp={false}   
-              > 
-                
+                ariaHideApp={false}
+              >
+
                   <div className="itemsNewPost">
                     <div className="descriptionPostModal">
                         <div className="allDescriptionPost">
@@ -69,7 +71,7 @@ function NewPostModal({ showModal, closeModal }) {
                             <p >Create a new post!</p>
                           </div>
                           <div className="descriptionPost">
-                            <textarea  placeholder="Type post here..." onChange={updateStateFormText}></textarea> 
+                            <textarea  placeholder="Type post here..." onChange={updateStateFormText}></textarea>
                           </div>
                         </div>
 
@@ -77,7 +79,7 @@ function NewPostModal({ showModal, closeModal }) {
                           <label htmlFor="file-upload" className="custom-file-upload">
                             <i className="fa fa-cloud-upload"></i>  Upload
                           </label>
-                          <input id="file-upload" type="file" accept="image/*" onChange={onUploadPhoto}/> {/*вот в цьому файлі мав би писати код подібний як в чат ось*/} 
+                          <input id="file-upload" type="file" accept="image/*" onChange={onUploadPhoto}/> {/*вот в цьому файлі мав би писати код подібний як в чат ось*/}
                         </div>
                     </div>
                     <div className="btnModal">
@@ -87,11 +89,11 @@ function NewPostModal({ showModal, closeModal }) {
 
                     </div>
                   </div>
-       
+
               </Modal>
         </div>
       </div>
     );
   }
-  
+
   export default NewPostModal;

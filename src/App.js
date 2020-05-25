@@ -15,23 +15,24 @@ import SavedPosts from './SavedPosts/SavedPosts';
 // РОЗМІТКА(КОМПОНЕНТИ) ВІДОБРАЖАЄТЬСЯ НА СТОРІНЦІ
  function App(props) {
 
-
   return (
-    <BrowserRouter>
-      <div className='app-bloom'>
+    <div style={{ paddingTop: '100px' }}>
+      <BrowserRouter>
+        <div className='app-bloom'>
 
-      {/* <Route path='/login' component = {RegistrationPageJS}/>    */}
+          {/* <Route path='/login' component = {RegistrationPageJS}/>    */}
 
           <NavigationBar />
-          <Route path='/home' render ={ () => <MainPage state={props.state.mainPage} /> }/>
+          <Route path='/home' render ={ () => <MainPage /> }/>
           <Route path='/profile' render ={ () => <Profile /> }/>
           <Route path='/saved' render ={ () => <SavedPosts /> }/>
           <Route path='/chats' render ={ () => <Chats state={props.state.chatsPage} dispatch={props.dispatch} newMsgText={props.state.chatsPage.newMsgText} /> }/>
-          
+
           <FooterPage />
-        
-      </div>
-    </BrowserRouter>
+
+        </div>
+      </BrowserRouter>
+    </div>
   );
 }
 
