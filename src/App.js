@@ -10,6 +10,8 @@ import Chats from './Chats/Chats';
 import {Route, BrowserRouter} from 'react-router-dom';
 import SavedPosts from './SavedPosts/SavedPosts';
 // import RegistrationPageJS from './Registration/RegistationPageJS';
+import SimpleReactLightbox from "simple-react-lightbox";
+import Login from './Registration/RegistationPageJS'
 
 
 // РОЗМІТКА(КОМПОНЕНТИ) ВІДОБРАЖАЄТЬСЯ НА СТОРІНЦІ
@@ -21,9 +23,13 @@ import SavedPosts from './SavedPosts/SavedPosts';
         <div className='app-bloom'>
 
           {/* <Route path='/login' component = {RegistrationPageJS}/>    */}
-
+          <Route exact path="/login">
+            <Login />
+          </Route>
           <NavigationBar />
-          <Route path='/home' render ={ () => <MainPage /> }/>
+          <SimpleReactLightbox>
+            <Route path='/home' render ={ () => <MainPage /> }/>
+          </SimpleReactLightbox>
           <Route path='/profile' render ={ () => <Profile /> }/>
           <Route path='/saved' render ={ () => <SavedPosts /> }/>
           <Route path='/chats' render ={ () => <Chats state={props.state.chatsPage} dispatch={props.dispatch} newMsgText={props.state.chatsPage.newMsgText} /> }/>

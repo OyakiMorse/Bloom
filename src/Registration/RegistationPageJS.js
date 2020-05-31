@@ -28,66 +28,82 @@
 
 // signInButtonMain.addEventListener('click', () => onSignInButtonMain())
 
-import React from 'react';
-import './RegistationPageS.css';
+import React, { useState } from "react";
+import { Button, FormGroup, FormControl } from "react-bootstrap";
+import './RegistrationPage.css';
+
+export default function Login() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  function validateForm() {
+    return email.length > 0 && password.length > 0;
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+  }
+
+  return (
+    <div className="Login">
+      <form onSubmit={handleSubmit}>
 
 
-function RegistationPageJS() {
-    return (
-    <div class="container" id="container">
-        <div class="form-container sign-up-container">
-           <form action="#">
-               <h1>Create Account</h1>
-               <div class="social-container">
-                   <a href="/home" class="social"><i class="fab fa-facebook-f"></i></a>
-                   <a href="/home" class="social"><i class="fab fa-linkedin-in"></i></a>
-               </div>
-               <span>or use email for registration</span>
-               <input type="text" placeholder="Name" />
-               <input type="email" placeholder="Email" />
-               <input type="password" placeholder="Password" />
-               <button>Sign Up</button>
-           </form>
-        </div>
+        <FormGroup controlId="email" bsSize="large">
+          <h3>Create Account</h3>
+          <span>Email</span>
 
-        <div class="form-container sign-in-container" id="MainSignInContainerId">
-            <form action="#">
-                
-                <h1>Sign Up</h1>
-                <div class="social-container">
-                    <a href="/home" class="social"><i class="fab fa-facebook-f"></i></a>
-                    <a href="/home" class="social"><i class="fab fa-linkedin-in"></i></a>
-                </div>
-                <span>or use your account</span>
-                <input type="email" placeholder="Email" id = "SignInEmailId" />
-                <input type="password" placeholder="Password" id = "SignInPasswordId" />
-                <a href="/ty">Forgot password?</a>
-                <button id= "SignInAuth">Sign In</button>
-            </form>
-        </div>
-        <div class="overlay-container">
-            <div class="overlay">
-                <div class="overlay-panel overlay-left">
-                    <img src="Logo1.png" alt="*"/>
-                    <h1 id="Bloom">Bloom</h1>
-                    <h1>Welcome Back!</h1>
-                    <p>
-                        To keep connected with us please login with your personal info
-                    </p>
-                    <button class="ghost" id="signIn">Sign In</button>
-                </div>
-                <div class="overlay-panel overlay-right">
-                    <img src="Logo1.png" alt="*"/>
-                    <h1 id="Bloom">Bloom</h1>
-                    <h1>Hello, creators!</h1>
-                    <p>Enter your personal details for strat discover with us</p>
-                    <button class="ghost" id="signUp">Sign Up</button>
-                </div>
-            </div>
-        </div>
-    </div> 
-    )
+          <FormControl
+            autoFocus
+            type="email"
+            value={email}
+            onChange={e => setEmail(e.target.value)}
+          />
+        </FormGroup>
+
+        <FormGroup controlId="password" bsSize="large">
+          <span>Password</span>
+
+          <FormControl
+            value={password}
+            onChange={e => setPassword(e.target.value)}
+            type="password"
+          />
+          
+        </FormGroup>
+        <Button className='button' block bsSize="large" disabled={!validateForm()}>
+          Sign Up
+        </Button>
+      </form>
+      
+      <form onSubmit={handleSubmit}>
+
+        <FormGroup controlId="email" bsSize="large">
+        <h3>Sign In</h3>
+          <span>Email</span>
+
+          <FormControl
+            autoFocus
+            type="email"
+            value={email}
+            onChange={e => setEmail(e.target.value)}
+          />
+        </FormGroup>
+
+        <FormGroup controlId="password" bsSize="large">
+          <span>Password</span>
+
+          <FormControl
+            value={password}
+            onChange={e => setPassword(e.target.value)}
+            type="password"
+          />
+          
+        </FormGroup>
+        <Button block bsSize="large" disabled={!validateForm()} type="submit">
+        Sign In
+        </Button>
+      </form>
+    </div>
+  );
 }
-
-export default RegistationPageJS;
-
